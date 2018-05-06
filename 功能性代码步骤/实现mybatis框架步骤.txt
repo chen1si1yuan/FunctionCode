@@ -1,4 +1,6 @@
-  第一步：配置web.xml文件
+导入mybatis.jar 和mybatis-spring.jar   注意版本兼容性问题  
+
+第一步：配置web.xml文件
             ：1.加载扫描主配置文件  <context-param>
                                      <param-name>contextConfigLocation</param-name>
                                      <param-value>classpath:spring-mybatis.xml</param-value>
@@ -35,7 +37,7 @@
                                                <url-pattern>/*</url-pattern>
                                              </filter-mapping>
 
-                                             <!-- spring监听器 -->
+                                             <!-- spring监听器 mybatis配置文件需要使用 重要-->  
                                                <listener>
                                                <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
                                              </listener>
